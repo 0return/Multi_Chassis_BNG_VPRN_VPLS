@@ -1,1 +1,22 @@
-# running bng on the bngblasterbngblaster -C /configs/ipoe.json# verify commands on both BNGsshow service id 18 dhcp lease-state  show service id 18 subscriber-hosts detail# verify commands on BNG 1show redundancy multi-chassis mc-lag peer 2.2.2.2# verify commands on BNG 2show redundancy multi-chassis mc-lag peer 1.1.1.1# verify commands on the Switch show service id 100 fdb detail
+# running bng on the bngblaster
+
+bngblaster -C /configs/ipoe.json
+
+# verify commands on both BNGs
+
+show service id 18 dhcp lease-state  
+show service id 18 subscriber-hosts detail
+
+# verify commands on BNG 1
+
+show redundancy multi-chassis mc-lag peer 2.2.2.2
+show redundancy multi-chassis sync peer 2.2.2.2 detail 
+
+# verify commands on BNG 2
+
+show redundancy multi-chassis mc-lag peer 1.1.1.1
+show redundancy multi-chassis sync peer 1.1.1.1 detail 
+
+# verify commands on the Switch 
+
+show service id 100 fdb detail
