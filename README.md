@@ -1,3 +1,5 @@
+# BNG with Multi-Chassis
+
 The architecture recreated in containerlab consists of two BNGs, an intermediate switch, and a BNG-Blaster used to generate subscriber hosts.
 BNG1 and BNG2 are configured with local DHCP within a VPRN and operate in a multi-chassis redundancy setup.
 Both BNGs connect to the switch through LAG interfaces configured with MC-LAG.
